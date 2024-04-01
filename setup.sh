@@ -22,13 +22,8 @@ python3.11 -m pip install ipython prompt_toolkit
 python3.11 -m pip install --upgrade psutil
 
 sudo apt-get install python3.11-dev
+
+python3.11 -m pip install --upgrade pip
+python3.11 -m pip install wheel
+python3.11 -m pip install --pre --upgrade tensorrt
 python3.11 -m pip install pycuda onnx scikit-image
-
-wget https://developer.nvidia.com/downloads/compute/machine-learning/tensorrt/10.0.0/local_repo/nv-tensorrt-local-repo-ubuntu2204-10.0.0-cuda-12.4_1.0-1_amd64.deb
-os="ubuntu2204"
-tag="10.0.0-cuda-12.4"
-sudo dpkg -i nv-tensorrt-local-repo-${os}-${tag}_1.0-1_amd64.deb
-sudo cp /var/nv-tensorrt-local-repo-${os}-${tag}/*-keyring.gpg /usr/share/keyrings/
-sudo apt-get update
-
-sudo apt-get install tensorrt
